@@ -963,7 +963,7 @@ class _CCompiler:
             return
         #      attr            regex        compiler-expression
         detect_arch = (
-            ("cc_on_x64",      ".*(x|x86_|amd)64.*", ""),
+            ("cc_on_x64",      ".*(x|x86_|amd|i86pc.)64.*", ""), # i86pc.64 - Illumos (Solaris) x64
             ("cc_on_x86",      ".*(win32|x86|i386|i686).*", ""),
             ("cc_on_ppc64le",  ".*(powerpc|ppc)64(el|le).*|.*powerpc.*",
                                           "defined(__powerpc64__) && "
